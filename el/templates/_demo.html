@@ -3,19 +3,19 @@
 DEMO PAGE FOR COMPONENT '<%=elementName%>'
 -->
 <html>
-  <head>
-    <title>DEMO <%=elementName%></title>
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
-    <script src="../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<head>
+  <title>DEMO <%=elementName%></title>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+  <script src="../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
 
-    <link rel="import" href="<%=elementName%>.html">
+  <link rel="import" href="<%=elementName%>.html">
 
-    <style is="custom-style">
-    </style>
+  <style is="custom-style"></style>
 
-  </head>
+</head>
 
-  <body unresolved>
+<body unresolved>
+  <span id="browser-sync-binding"></span>
 
   <x-app></x-app>
 
@@ -29,37 +29,24 @@ DEMO PAGE FOR COMPONENT '<%=elementName%>'
       <div>
         <h4>Demo: <%=elementName%></h4>
         <div class="horizontal-section">
-          <<%=elementName%> id="myelement" greet="{{test}}" on=greet-event="handeGreet" ></<%=elementName%>>
+          <<%=elementName%> greet="{{greet}}"></<%=elementName%>>
         </div>
       </div>
-    </div>
-  </template>
+    </template>
   </dom-module>
 
-
   <script>
-  Polymer({
-        is: 'x-app',
-        properties: {
-          test: {
-            type: String,
-            value: 'PolymerTS'
-          }
-        },
-        listeners: {},
-        handleGreet: function(e) {
-            console.log('handle gree event!', e);
-        },
-        ready: function() {
-          console.log("APP ready" );
+    Polymer({
+      is: 'x-app',
+      ready: function() {
+        this.greet = "Hello Demo!";
+      }
+    });
 
-        }
-      });
-
-        (function(document) {
-          'use strict';
-        })(document);
+    (function(document) {
+      'use strict';
+    })(document);
   </script>
 
-  </body>
+</body>
 </html>

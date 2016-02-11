@@ -8,7 +8,7 @@
     "polymer",
     "typescript"
   ],
-  "repository": "bsorrentino/generator-polymerts",
+  "repository": "jhrdina/generator-polymerts",
   "files": [
     "el",
     "gen",
