@@ -2,7 +2,7 @@
 /// <reference path="../<%= pathToTypings %>/chai/chai.d.ts" />
 /// <reference path="../<%= pathToTypings %>/mocha/mocha.d.ts" />
 
-var expect = expect || undefined;
+var expect: Chai.ExpectStatic = expect || undefined;
 var fixture = fixture || undefined;
 
 suite('<%=elementName%> tests', function() {
