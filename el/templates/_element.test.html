@@ -1,0 +1,25 @@
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title><%=elementName%></title>
+
+  <script src="../<%= pathToBower %>/webcomponentsjs/webcomponents-lite.min.js"></script>
+  <script src="../<%= pathToBower %>/web-component-tester/browser.js"></script>
+
+  <!-- Import the element to test -->
+  <link rel="import" href="../<%=elementName%>.html">
+
+</head>
+<body>
+
+  <test-fixture id="basic">
+    <template>
+      <<%=elementName%>></<%=elementName%>>
+    </template>
+  </test-fixture>
+
+  <script src="<%=elementName%>.js"></script>
+</body>
+</html>
